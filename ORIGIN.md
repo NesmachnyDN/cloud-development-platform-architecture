@@ -2,7 +2,9 @@
 
 ## Origin
 
-This architecture case was independently authored in 2024 as a graduation project for an Enterprise Architecture / TOGAF 10 training course. The original work was developed incrementally across a sequence of architecture assignments and later consolidated into a graduation presentation and ArchiMate model.
+This architecture case was independently authored in 2024 as a graduation project for an Enterprise Architecture / TOGAF 10 training course. The original work was developed incrementally across a sequence of architecture assignments and consolidated into an ArchiMate model and graduation presentation.
+
+A later **v2 presentation** supplied by the author is the canonical visual source for this public portfolio edition. Repository images are rendered directly from that PDF rather than reconstructed from the PowerPoint source.
 
 The public repository is not a copy of the original course repository. It is a curated portfolio edition organized around the architecture transformation storyline rather than around assignment numbers.
 
@@ -19,6 +21,15 @@ The public edition retains the author's architecture reasoning covering:
 - risk and change-readiness assessment;
 - implementation and migration planning.
 
+## Public-presentation sanitization
+
+The public PDF is derived from the author's v2 presentation with a deliberately narrow publication boundary:
+
+- the personal biography / employment-history slide is excluded;
+- the closing "thank you" slide is excluded because it adds no architecture evidence;
+- the organization profile on the project-context slide is generalized to remove workforce-size and industry-identifying markers;
+- the remaining project and appendix slides are retained as authored.
+
 ## What is intentionally excluded
 
 The following material is not copied into the public repository:
@@ -28,7 +39,7 @@ The following material is not copied into the public repository:
 - course/homework instructions and submission scaffolding;
 - raw working spreadsheets and presentation source files;
 - model objects that existed only to track completion of course assignments;
-- any credentials or environment-specific configuration.
+- credentials or environment-specific configuration.
 
 ## Product names
 
