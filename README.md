@@ -2,7 +2,7 @@
 
 **Enterprise Architecture transformation case study — TOGAF 10 / ArchiMate**
 
-This repository presents an architecture project for transforming software delivery in a large industrial organization. The baseline relies on local workstation-dependent builds, weak testing and manual transfer/deployment into production. The target state introduces a standardized development platform, automated quality and delivery practices, explicit architecture capabilities, organizational changes and a staged migration roadmap.
+This repository presents an architecture project for transforming software delivery in a large industrial organization. The baseline relies on workstation-dependent builds, weak testing and manual transfer/deployment into production. The target state introduces a standardized development platform, automated quality and delivery practices, explicit architecture capabilities, organizational changes and a staged migration roadmap.
 
 > **Role:** enterprise architecture, stakeholder analysis, capability-based planning, AS-IS / TO-BE modeling, target architecture, organization design, GAP analysis, risk/readiness assessment and migration planning.
 >
@@ -12,41 +12,65 @@ This repository presents an architecture project for transforming software deliv
 
 ### 1. Baseline and objective
 
-The project starts from a low-maturity delivery model and defines the target outcome: reduce production defects and downtime while shortening the path from development to production. The public edition generalizes the organization profile and removes employer-specific information.
+The starting point is a low-maturity software-delivery model: development teams perform responsibilities outside their core competencies, builds depend on local workstation environments, testing is weak, and releases are transferred and deployed manually into production.
 
-![Project context](assets/diagrams/01-project-context.jpg)
+The transformation objective is to reduce production defects and downtime while shortening delivery lead time. The solution is treated as an **enterprise change**, not only a tooling replacement: capabilities, organization, processes, application services, infrastructure and migration are designed together.
 
 ### 2. Motivation and capability-based planning
 
-Stakeholder concerns and diagnosed problems were translated into goals and measurable outcomes. A capability map was then used to identify which organizational abilities had to be strengthened before selecting concrete solution building blocks.
+Stakeholder concerns and diagnosed problems were translated into goals and measurable outcomes. The motivation model links technology evolution, project growth and service-quality expectations with the concrete changes required in people, engineering practices and delivery performance.
 
-![Motivation model](assets/diagrams/02-motivation-model.jpg)
+![Motivation model](assets/readme/01-motivation-model.jpg)
 
-![Capability map](assets/diagrams/03-capability-map.jpg)
+The capability map then identifies and prioritizes the organizational abilities needed to reach the target state before selecting concrete Solution Building Blocks.
+
+![Capability map](assets/readme/02-capability-map.jpg)
 
 ### 3. Delivery model: AS-IS → TO-BE
 
-The baseline value stream exposes four core constraints: responsibilities crossing competency boundaries, environment-dependent local builds, weak testing and manual deployment. The target value stream introduces architecture, testing and engineering responsibilities plus automated build, quality and delivery stages.
+The baseline value stream exposes responsibility overlap, environment-dependent local builds, insufficient testing and manual deployment.
 
-![AS-IS value stream](assets/diagrams/05-value-stream-as-is.jpg)
+![AS-IS value stream](assets/readme/03-value-stream-as-is.jpg)
 
-![TO-BE value stream](assets/diagrams/06-value-stream-to-be.jpg)
+The target value stream introduces explicit architecture, testing and engineering responsibilities together with automated build, quality-control and delivery stages.
+
+![TO-BE value stream](assets/readme/04-value-stream-to-be.jpg)
 
 ### 4. Target architecture
 
-The complete target model spans business, application and technology layers. In the original study the **Sfera / Nota** product family is used as one concrete SBB realization; the architectural reasoning remains separable from that product choice.
+The target architecture spans **business, application and technology layers**. The full model is intentionally split below into focused extracts so that the architecture remains readable on a GitHub page.
 
-![Target architecture](assets/diagrams/12-target-architecture.jpg)
+#### Business layer
+
+The business view connects the target delivery process with organizational roles and responsibilities introduced by the transformation.
+
+![Target architecture — business layer](assets/readme/05-target-architecture-business.jpg)
+
+#### Application layer
+
+The application view shows the development-platform services supporting source management, build, testing, quality controls, knowledge/project management and delivery automation. In the original study, the **Sfera / Nota** product family is used as one concrete SBB realization; the architecture reasoning remains separable from that product choice.
+
+![Target architecture — application layer](assets/readme/06-target-architecture-application.jpg)
+
+#### Technology layer
+
+The technology view places the development platform and application execution environments on the target infrastructure and operating-system/container foundation.
+
+![Target architecture — technology layer](assets/readme/07-target-architecture-technology.jpg)
+
+The complete multi-layer source view is available in the [visual walkthrough](docs/visual-walkthrough.md).
 
 ### 5. GAP analysis and staged migration
 
-The baseline-to-target GAP analysis covers organization, infrastructure, business processes and software. The change set is grouped into staged work packages rather than treated as a big-bang replacement.
+The baseline-to-target GAP analysis covers organization, infrastructure, business processes and software. It provides the change inventory from which migration work packages are formed.
 
-![GAP analysis](assets/diagrams/10-gap-summary.jpg)
+![GAP analysis summary](assets/readme/08-gap-summary.jpg)
 
-![Migration roadmap](assets/diagrams/13-detailed-roadmap.jpg)
+The transformation is deliberately staged rather than implemented as a big-bang replacement: first the organizational and infrastructure foundation, then development/process-management capabilities, followed by production-zone and platform evolution.
 
-The detailed GAP matrix is also published as a direct source render: [full GAP matrix](assets/diagrams/14-detailed-gap-matrix.jpg).
+![Transformation roadmap](assets/readme/09-transformation-roadmap.jpg)
+
+For deeper review, see the [detailed migration roadmap](assets/diagrams/13-detailed-roadmap.jpg) and [full GAP matrix](assets/diagrams/14-detailed-gap-matrix.jpg).
 
 ## What was designed
 
@@ -61,13 +85,11 @@ The detailed GAP matrix is also published as a direct source render: [full GAP m
 | Application & technology | target multi-layer architecture and concrete SBB realization |
 | Transition | GAP analysis, staged work packages and detailed migration roadmap |
 
-## Visual walkthrough
+## Explore the full case
 
-The selected architecture artifacts are available in **[Visual walkthrough](docs/visual-walkthrough.md)**.
+The README uses focused crops for readability. The **[Visual walkthrough](docs/visual-walkthrough.md)** preserves the complete presentation slides and supporting architecture evidence.
 
-For the complete sanitized project presentation, including detailed appendices for readiness, risk, functional-role models and GAP analysis, see **[Public presentation (PDF)](docs/diploma-presentation-public.pdf)**.
-
-The repository images are direct raster renders from the author's **v2 PDF presentation**. They are not reconstructed diagrams and are not re-laid out from the PowerPoint source; this avoids the layer/z-order rendering artifacts that can occur when exporting the source deck in a different runtime.
+For the complete sanitized project presentation, including readiness assessment, risk analysis, organization design, functional-role models, target architecture, detailed roadmap and GAP matrix, see the **[Public presentation (PDF)](docs/diploma-presentation-public.pdf)**.
 
 ## Architecture storyline
 
