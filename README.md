@@ -2,59 +2,72 @@
 
 **Enterprise Architecture transformation case study — TOGAF 10 / ArchiMate**
 
-This repository presents an architecture project, not an executable software application.  
-The project designs a transformation of software delivery in a large industrial enterprise: from fragmented, workstation-dependent development and manual production deployment to a standardized **Cloud Development Platform**, stronger engineering capabilities, an explicit architecture function, and a staged migration roadmap.
+This repository presents an architecture project for transforming software delivery in a large industrial organization. The baseline relies on local workstation-dependent builds, weak testing and manual transfer/deployment into production. The target state introduces a standardized development platform, automated quality and delivery practices, explicit architecture capabilities, organizational changes and a staged migration roadmap.
 
-The original work was created as a graduation project for an Enterprise Architecture / TOGAF 10 course. The public edition keeps the authored architecture artifacts and removes course-management and historical repository noise.
-
-> **Role:** enterprise architecture, stakeholder analysis, capability-based planning, baseline/target architecture, organization design, GAP analysis, risk/readiness assessment, and migration planning.
+> **Role:** enterprise architecture, stakeholder analysis, capability-based planning, AS-IS / TO-BE modeling, target architecture, organization design, GAP analysis, risk/readiness assessment and migration planning.
+>
+> **Origin:** independently authored graduation project for an Enterprise Architecture / TOGAF 10 course in 2024. The public edition is a curated portfolio version of the author's work.
 
 ## Project at a glance
 
-### 1. Starting point
+### 1. Baseline and objective
 
-The baseline organization has a dedicated software-development function and its own data-center infrastructure, but the delivery model has structural constraints: local environment-dependent builds, weak testing, manual transfer/deployment into production, overlapping team responsibilities, and no explicit enterprise architecture function.
+The project starts from a low-maturity delivery model and defines the target outcome: reduce production defects and downtime while shortening the path from development to production. The public edition generalizes the organization profile and removes employer-specific information.
 
-![Project context](assets/diagrams/01-project-context.png)
+![Project context](assets/diagrams/01-project-context.jpg)
 
-### 2. Capability transformation
+### 2. Motivation and capability-based planning
 
-The architecture work starts from business drivers and capabilities rather than from a predefined technology stack. The capability map identifies the areas that must change to achieve the target delivery outcomes.
+Stakeholder concerns and diagnosed problems were translated into goals and measurable outcomes. A capability map was then used to identify which organizational abilities had to be strengthened before selecting concrete solution building blocks.
 
-![Capability map](assets/diagrams/03-capability-map.png)
+![Motivation model](assets/diagrams/02-motivation-model.jpg)
 
-### 3. Target enterprise / solution architecture
+![Capability map](assets/diagrams/03-capability-map.jpg)
 
-The target model spans business, application and technology layers. It connects software-delivery activities with development-platform services and infrastructure. In the graduation case, the **Sfera / Nota** stack is used as one concrete SBB realization; the architecture reasoning remains separable from that product choice.
+### 3. Delivery model: AS-IS → TO-BE
 
-![Target architecture](assets/diagrams/12-target-architecture.png)
+The baseline value stream exposes four core constraints: responsibilities crossing competency boundaries, environment-dependent local builds, weak testing and manual deployment. The target value stream introduces architecture, testing and engineering responsibilities plus automated build, quality and delivery stages.
 
-### 4. Migration, not a big-bang replacement
+![AS-IS value stream](assets/diagrams/05-value-stream-as-is.jpg)
 
-GAPs are converted into work packages and sequenced into a staged transformation roadmap.
+![TO-BE value stream](assets/diagrams/06-value-stream-to-be.jpg)
 
-![Migration roadmap](assets/diagrams/13-migration-roadmap.png)
+### 4. Target architecture
+
+The complete target model spans business, application and technology layers. In the original study the **Sfera / Nota** product family is used as one concrete SBB realization; the architectural reasoning remains separable from that product choice.
+
+![Target architecture](assets/diagrams/12-target-architecture.jpg)
+
+### 5. GAP analysis and staged migration
+
+The baseline-to-target GAP analysis covers organization, infrastructure, business processes and software. The change set is grouped into staged work packages rather than treated as a big-bang replacement.
+
+![GAP analysis](assets/diagrams/10-gap-summary.jpg)
+
+![Migration roadmap](assets/diagrams/13-detailed-roadmap.jpg)
+
+The detailed GAP matrix is also published as a direct source render: [full GAP matrix](assets/diagrams/14-detailed-gap-matrix.jpg).
 
 ## What was designed
 
-| Architecture area | Artifact |
+| Architecture area | Evidence in the case |
 |---|---|
-| Motivation | stakeholder drivers, problems, goals and project success metrics |
-| Strategy | capability map and capability priorities |
-| Change readiness | transformation-readiness assessment and communication implications |
-| Risk | initial/residual risk assessment and project risk heatmap |
+| Motivation | stakeholder drivers, problems, goals and measurable project outcomes |
+| Strategy | capability map and prioritization |
+| Change readiness | assessment domains, stakeholder interviews and transformation recommendation |
+| Risk | initial/residual risk assessment, mitigation measures and risk heatmap |
 | Business architecture | AS-IS and TO-BE software-delivery value streams |
 | Organization | baseline architecture function and target competency/project-team model |
-| Application & technology | baseline/target architecture and ABB/SBB realization |
-| Transition | GAP analysis, transformation stages, work packages and migration roadmap |
+| Application & technology | target multi-layer architecture and concrete SBB realization |
+| Transition | GAP analysis, staged work packages and detailed migration roadmap |
 
 ## Visual walkthrough
 
-The most important original presentation artifacts are available in  
-**[Visual walkthrough](docs/visual-walkthrough.md)**.
+The selected architecture artifacts are available in **[Visual walkthrough](docs/visual-walkthrough.md)**.
 
-For the complete 19-slide authored presentation, see  
-**[Diploma presentation (PDF)](docs/diploma-presentation-public.pdf)**.
+For the complete sanitized project presentation, including detailed appendices for readiness, risk, functional-role models and GAP analysis, see **[Public presentation (PDF)](docs/diploma-presentation-public.pdf)**.
+
+The repository images are direct raster renders from the author's **v2 PDF presentation**. They are not reconstructed diagrams and are not re-laid out from the PowerPoint source; this avoids the layer/z-order rendering artifacts that can occur when exporting the source deck in a different runtime.
 
 ## Architecture storyline
 
@@ -80,7 +93,7 @@ flowchart LR
 | ArchiMate views | 20 |
 | Supporting canvas views | 4 |
 
-The model spans Motivation, Strategy, Business, Application, Technology, and Implementation & Migration concepts.
+The underlying model spans Motivation, Strategy, Business, Application, Technology, and Implementation & Migration concepts.
 
 ## Further documentation
 
@@ -94,4 +107,4 @@ The model spans Motivation, Strategy, Business, Application, Technology, and Imp
 
 ## Publication boundary
 
-The public portfolio version does not reproduce historical Git metadata, course task-management files, credentials, internal endpoints, or unrelated working artifacts. The screenshots above are rendered from the original authored graduation presentation and retain their original Russian labels; the repository narrative and captions provide the English interpretation.
+The public portfolio edition does not include the original repository history, course-management scaffolding, raw working spreadsheets, source PowerPoint, credentials or environment-specific configuration. The personal biography slide and employer-specific identifying details are removed from the public PDF. Product names shown in the architecture are public technology/SBB references and do not imply affiliation or endorsement.
