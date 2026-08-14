@@ -1,5 +1,9 @@
 # Cloud Development Platform Architecture
 
+<p align="center">
+  <img src="docs/images/cloud-development-platform-architecture-social-preview.jpg" alt="Cloud Development Platform Architecture portfolio cover" width="1000">
+</p>
+
 **Enterprise Architecture transformation case study — TOGAF 10 / ArchiMate**
 
 This repository presents an architecture project for transforming software delivery in a large industrial organization. The baseline relies on workstation-dependent builds, weak testing and manual transfer/deployment into production. The target state introduces a standardized development platform, automated quality and delivery practices, explicit architecture capabilities, organizational changes and a staged migration roadmap.
